@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+        h1   {color: blue;}
+        p    {color: red;}
+        a {hover: color: red}
+        ul li a:hover {background: #ff9696;}
+
+        .carousel {
+          --current-slide: 0;
+          /* we set position relative so absolute position works properly for the buttons */
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .carousel-button {
+          /* vertically centering the buttons */
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+        
+          /* basic styling */
+          padding: 0;
+          margin: 0.5rem;
+          border-radius: 40%;
+          background-color: transparent;
+          border: none;
+        
+          font-size: 1.5rem;
+          cursor: pointer;
+        
+          transition: color 0.1s;
+        }
+        
+        .carousel-button:hover {
+          color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .carousel-button_next {
+          /* The "next slide button" will be at the right */
+          right: 0;
+        }
+        
+        .slides {
+          display: flex;
+          transition: transform 0.5s;
+          transform: translateX(calc(-100% * var(--current-slide)));
+        }
+        
+        .slide {
+          flex: 0 0 100%;
+        }
+        
+        @media screen and (min-width: 768px) {
+          .carousel-button {
+            font-size: 2rem;
+            margin: 1rem;
+          }
+        }
+      </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>CV</title>
+  <link rel="icon" type="image/x-icon" href="https://www.logolynx.com/images/logolynx/f7/f729f82b040ce6f1cbc0b812028371e8.png">
+  </head>
+ 
+    
+   
+      {% if user.is_authenticated %}
+
+      <nav class="navbar navbar-light bg-light alert alert-danger" role="alert">
+       
+          <a class="navbar-brand" href="#">
+            <img src="https://www.logolynx.com/images/logolynx/f7/f729f82b040ce6f1cbc0b812028371e8.png" width="30" height="24">
+          </a>
+          
+          <a class="nav-item active">
+            <a class="nav-link">  Hi, {{ user.email }}<span class="sr-only">(current)</span></a>
+          </a> 
+            
+          <a href="{% url 'account_logout' %}" class="btn btn-danger btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Create a new  account" tabindex="-1" role="button" aria-disabled="true">Log Out</a>
+
+       
+
+      </nav>
+  
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Activity</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/cv/">New CV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/myCV/">My CV </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/qr/">Europass-QR Code</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/qaa/"> QA</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+</nav>
+
+
+<head>
+  <!-- Import font-awesome somewhere in the HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>
+  
+  <body>
+    <div class="carousel" data-carousel>
+      <div class="carousel-buttons">
+        <button
+          class="carousel-button carousel-button_previous"
+          data-carousel-button-previous>
+          <span class="fas fa-chevron-circle-left"></span>
+        </button>
+        <button
+          class="carousel-button carousel-button_next"
+          data-carousel-button-next>
+          <span class="fas fa-chevron-circle-right"></span>
+        </button>
+      </div>
+      <br></br>
+      <div class="container p-4">
+      <div class="slides" data-carousel-slides-container>
+        <div class="slide">
+          <!-- Anything can be here. Each slide can have any content -->
+          <h2>You can create a cv very quickly </h2>
+          <p><img class="d-block w-8 p-6" src="https://th.bing.com/th/id/OIP.i2jvAgLhOMyiL1Vc5RhRKAHaE6?pid=ImgDet&w=700&h=465&rs=1" alt="Second slide">
+        
+          </div>
+        <div class="slide">
+          <!-- Anything can be here. Each slide can have any content -->
+          <h2>Templates very beautiful<P>The template is very nice and suitable for any type of job</P></h2>
+          
+          <p><img class="d-block w-10" src="https://th.bing.com/th/id/OIP.03PQJEK7bPPD3FJ_lZs4TQHaJ4?pid=ImgDet&rs=1"></p>
+          
+        </div>
+
+        <div class="slide">
+          <!-- Anything can be here. Each slide can have any content -->
+          <h2>Enjoy!</h2>
+          <p><img class="d-block w-10" src="https://www.bewerbungsdesigns.de/images/product_images/info_images/bewerbungsdesign22_detail.jpg" alt="Second slide">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+   
+
+
+{% else %}
+<div class="container">
+  <br></br>
+  <div class="alert alert-primary" role="alert" style="font-size:40px">
+    <b>
+    Welcome to CV WebApp!
+    <b>
+  </div>
+<br></br>
+<div class="card" style="max-width: 5700px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://th.bing.com/th/id/OIP.BvjMiq5rENNj7WxljtDJdQHaIS?pid=ImgDet&w=201&h=224&c=7&dpr=1.3" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+
+        </h5> <br><br>
+        <p class="card-text">
+          <div class="alert alert-danger" role="alert">
+           
+            You are not logged in!
+          </div>
+        </p>
+        
+ <a href="{% url 'account_login' %}" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter in your account" tabindex="-1" role="button" aria-disabled="true">LogIn</a>
+ <a href="{% url 'account_signup' %}" class="btn btn-danger btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Create a new  account" tabindex="-1" role="button" aria-disabled="true">SignUp</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+ 
+
+
+ {% endif %}
+<script>
+ function modulo(number, mod) {
+  let result = number % mod;
+  if (result < 0) {
+    result += mod;
+  }
+  return result;
+}
+
+function setUpCarousel(carousel) {
+  function handleNext() {
+    currentSlide = modulo(currentSlide + 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function handlePrevious() {
+    currentSlide = modulo(currentSlide - 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function changeSlide(slideNumber) {
+    carousel.style.setProperty('--current-slide', slideNumber);
+  }
+
+  // get elements
+  const buttonPrevious = carousel.querySelector('[data-carousel-button-previous]');
+  const buttonNext = carousel.querySelector('[data-carousel-button-next]');
+  const slidesContainer = carousel.querySelector('[data-carousel-slides-container]');
+
+  // carousel state we need to remember
+  let currentSlide = 0;
+  const numSlides = slidesContainer.children.length;
+
+  // set up events
+  buttonPrevious.addEventListener('click', handlePrevious);
+  buttonNext.addEventListener('click', handleNext);
+}
+
+const carousels = document.querySelectorAll('[data-carousel]');
+carousels.forEach(setUpCarousel);
+</script>
+  </body
+</html>

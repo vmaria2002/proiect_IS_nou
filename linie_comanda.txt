@@ -1,0 +1,2655 @@
+Microsoft Windows [Version 10.0.22621.674]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\An3\IS\P1>pipenv install django~=3.1.0
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\An3\IS\P1>pip install pipenv
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pipenv in c:\users\vasil\appdata\roaming\python\python310\site-packages (2022.10.25)
+Requirement already satisfied: virtualenv-clone>=0.2.5 in c:\users\vasil\appdata\roaming\python\python310\site-packages (from pipenv) (0.5.7)
+Requirement already satisfied: setuptools>=36.2.1 in c:\python310\lib\site-packages (from pipenv) (63.2.0)
+Requirement already satisfied: certifi in c:\users\vasil\appdata\roaming\python\python310\site-packages (from pipenv) (2022.9.24)
+Requirement already satisfied: virtualenv in c:\users\vasil\appdata\roaming\python\python310\site-packages (from pipenv) (20.16.6)
+Requirement already satisfied: platformdirs<3,>=2.4 in c:\users\vasil\appdata\roaming\python\python310\site-packages (from virtualenv->pipenv) (2.5.2)
+Requirement already satisfied: filelock<4,>=3.4.1 in c:\users\vasil\appdata\roaming\python\python310\site-packages (from virtualenv->pipenv) (3.8.0)
+Requirement already satisfied: distlib<1,>=0.3.6 in c:\users\vasil\appdata\roaming\python\python310\site-packages (from virtualenv->pipenv) (0.3.6)
+
+D:\An3\IS\P1>pipenv install django~=3.1.0
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\An3\IS\P1>pipenv shell
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\An3\IS\P1>python -m pipenv
+Usage: python -m pipenv [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --where                         Output project home information.
+  --venv                          Output virtualenv information.
+  --py                            Output Python interpreter information.
+  --envs                          Output Environment Variable options.
+  --rm                            Remove the virtualenv.
+  --bare                          Minimal output.
+  --man                           Display manpage.
+  --support                       Output diagnostic information for use in
+                                  GitHub issues.
+  --site-packages / --no-site-packages
+                                  Enable site-packages for the virtualenv.
+                                  [env var: PIPENV_SITE_PACKAGES]
+  --python TEXT                   Specify which version of Python virtualenv
+                                  should use.
+  --three                         Use Python 3 when creating virtualenv.
+                                  Deprecated
+  --clear                         Clears caches (pipenv, pip).  [env var:
+                                  PIPENV_CLEAR]
+  -q, --quiet                     Quiet mode.
+  -v, --verbose                   Verbose mode.
+  --pypi-mirror TEXT              Specify a PyPI mirror.
+  --version                       Show the version and exit.
+  -h, --help                      Show this message and exit.
+
+
+Usage Examples:
+   Create a new project using Python 3.7, specifically:
+   $ pipenv --python 3.7
+
+   Remove project virtualenv (inferred from current directory):
+   $ pipenv --rm
+
+   Install all dependencies for a project (including dev):
+   $ pipenv install --dev
+
+   Create a lockfile containing pre-releases:
+   $ pipenv lock --pre
+
+   Show a graph of your installed dependencies:
+   $ pipenv graph
+
+   Check your installed dependencies for security vulnerabilities:
+   $ pipenv check
+
+   Install a local setup.py into your virtual environment/Pipfile:
+   $ pipenv install -e .
+
+   Use a lower-level pip command:
+   $ pipenv run pip freeze
+
+Commands:
+  check         Checks for PyUp Safety security vulnerabilities and against
+                PEP 508 markers provided in Pipfile.
+  clean         Uninstalls all packages not specified in Pipfile.lock.
+  graph         Displays currently-installed dependency graph information.
+  install       Installs provided packages and adds them to Pipfile, or (if no
+                packages are given), installs all packages from Pipfile.
+  lock          Generates Pipfile.lock.
+  open          View a given module in your editor.
+  requirements  Generate a requirements.txt from Pipfile.lock.
+  run           Spawns a command installed into the virtualenv.
+  scripts       Lists scripts in current environment config.
+  shell         Spawns a shell within the virtualenv.
+  sync          Installs all packages specified in Pipfile.lock.
+  uninstall     Uninstalls a provided package and removes it from Pipfile.
+  update        Runs lock, then sync.
+  verify        Verify the hash in Pipfile.lock is up-to-date.
+
+D:\An3\IS\P1>python -m pipenv shell
+Creating a virtualenv for this project...
+Pipfile: D:\An3\IS\P1\Pipfile
+Using C:/Python310/python.exe (3.10.7) to create virtualenv...
+[  ==] Creating virtual environment...created virtual environment CPython3.10.7.final.0-64 in 6765ms
+  creator Venv(dest=C:\Users\vasil\.virtualenvs\P1-qv8LNru9, clear=False, no_vcs_ignore=False, global=False, describe=CPython3Windows)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\vasil\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==22.3, setuptools==65.5.0, wheel==0.37.1
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+Successfully created virtual environment!
+Virtualenv location: C:\Users\vasil\.virtualenvs\P1-qv8LNru9
+Creating a Pipfile for this project...
+Launching subshell in virtual environment...
+Microsoft Windows [Version 10.0.22621.674]
+(c) Microsoft Corporation. All rights reserved.
+
+(P1-qv8LNru9) D:\An3\IS\P1>django-admin startproject config .
+'django-admin' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pipenv install django~=3.1.0
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pip install django~=3.1.0
+Collecting django~=3.1.0
+  Downloading Django-3.1.14-py3-none-any.whl (7.8 MB)
+     ---------------------------------------- 7.8/7.8 MB 5.6 MB/s eta 0:00:00
+Collecting pytz
+  Downloading pytz-2022.5-py2.py3-none-any.whl (500 kB)
+     ---------------------------------------- 500.7/500.7 kB 7.8 MB/s eta 0:00:00
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.3-py3-none-any.whl (42 kB)
+Collecting asgiref<4,>=3.2.10
+  Using cached asgiref-3.5.2-py3-none-any.whl (22 kB)
+Installing collected packages: pytz, sqlparse, asgiref, django
+Successfully installed asgiref-3.5.2 django-3.1.14 pytz-2022.5 sqlparse-0.4.3
+
+(P1-qv8LNru9) D:\An3\IS\P1>pipenv shell
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pip shell
+ERROR: unknown command "shell" - maybe you meant "help"
+
+(P1-qv8LNru9) D:\An3\IS\P1>django-admin startproject config .
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py startapp accounts
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py makemigrations accounts
+Migrations for 'accounts':
+  accounts\migrations\0001_initial.py
+    - Create model CustomUser
+
+(P1-qv8LNru9) D:\An3\IS\P1> python manage.py migrate
+Operations to perform:
+  Apply all migrations: accounts, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying accounts.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying sessions.0001_initial... OK
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py createsuperuser
+Username: Maria
+Email address: vasilachemaria20@yahoo.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:08:02
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:08:17] "GET /admin/ HTTP/1.1" 302 0
+[29/Oct/2022 16:08:17] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194
+[29/Oct/2022 16:08:17] "GET /static/admin/css/base.css HTTP/1.1" 200 16307
+[29/Oct/2022 16:08:17] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[29/Oct/2022 16:08:17] "GET /static/admin/css/login.css HTTP/1.1" 200 1185
+[29/Oct/2022 16:08:17] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2138
+[29/Oct/2022 16:08:17] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18344
+[29/Oct/2022 16:08:17] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[29/Oct/2022 16:08:18] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[29/Oct/2022 16:08:18] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[29/Oct/2022 16:08:21] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2376
+[29/Oct/2022 16:08:21] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[29/Oct/2022 16:08:29] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[29/Oct/2022 16:08:29] "GET /admin/ HTTP/1.1" 200 2902
+[29/Oct/2022 16:08:29] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[29/Oct/2022 16:08:29] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[29/Oct/2022 16:08:29] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>pipenv install django-allauth~=0.42.0
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pip install django-allauth~=0.42.0
+Collecting django-allauth~=0.42.0
+  Using cached django-allauth-0.42.0.tar.gz (549 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: Django>=2.0 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from django-allauth~=0.42.0) (3.1.14)
+Collecting python3-openid>=3.0.8
+  Using cached python3_openid-3.2.0-py3-none-any.whl (133 kB)
+Collecting requests-oauthlib>=0.3.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting requests
+  Using cached requests-2.28.1-py3-none-any.whl (62 kB)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (0.4.3)
+Requirement already satisfied: asgiref<4,>=3.2.10 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (3.5.2)
+Requirement already satisfied: pytz in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (2022.5)
+Collecting defusedxml
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2022.9.24-py3-none-any.whl (161 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+Collecting charset-normalizer<3,>=2
+  Using cached charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+Building wheels for collected packages: django-allauth
+  Building wheel for django-allauth (setup.py) ... done
+  Created wheel for django-allauth: filename=django_allauth-0.42.0-py3-none-any.whl size=866353 sha256=5fa1152ba39f005b09dbc5dd3ab4e390a8bd09d65c7963ee89a5c5aa8810e495
+  Stored in directory: c:\users\vasil\appdata\local\pip\cache\wheels\45\1c\5f\eed9617eb3fd2bfaa57451cd66d410a6f1cfe0baea6c456201
+Successfully built django-allauth
+Installing collected packages: urllib3, oauthlib, idna, defusedxml, charset-normalizer, certifi, requests, python3-openid, requests-oauthlib, django-allauth
+Successfully installed certifi-2022.9.24 charset-normalizer-2.1.1 defusedxml-0.7.1 django-allauth-0.42.0 idna-3.4 oauthlib-3.2.2 python3-openid-3.2.0 requests-2.28.1 requests-oauthlib-1.3.1 urllib3-1.26.12
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py migrate
+Operations to perform:
+  Apply all migrations: account, accounts, admin, auth, contenttypes, sessions, sites, socialaccount
+Running migrations:
+  Applying account.0001_initial... OK
+  Applying account.0002_email_max_length... OK
+  Applying sites.0001_initial... OK
+  Applying sites.0002_alter_domain_unique... OK
+  Applying socialaccount.0001_initial... OK
+  Applying socialaccount.0002_token_max_lengths... OK
+  Applying socialaccount.0003_extra_data_default_dict... OK
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:11:25
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:11:46] "GET /accounts/login/ HTTP/1.1" 302 0
+Not Found: /accounts/profile/
+[29/Oct/2022 16:11:46] "GET /accounts/profile/ HTTP/1.1" 404 5436
+[29/Oct/2022 16:12:33] "GET /accounts/login/ HTTP/1.1" 302 0
+Not Found: /accounts/profile/
+[29/Oct/2022 16:12:33] "GET /accounts/profile/ HTTP/1.1" 404 5436
+[29/Oct/2022 16:12:56] "GET /accounts/signup/ HTTP/1.1" 302 0
+Not Found: /accounts/profile/
+[29/Oct/2022 16:12:56] "GET /accounts/profile/ HTTP/1.1" 404 5436
+
+(P1-qv8LNru9) D:\An3\IS\P1> mkdir templates
+
+(P1-qv8LNru9) D:\An3\IS\P1>
+
+(P1-qv8LNru9) D:\An3\IS\P1> mkdir templates
+
+(P1-qv8LNru9) D:\An3\IS\P1>mkdir templates/account
+The syntax of the command is incorrect.
+
+(P1-qv8LNru9) D:\An3\IS\P1>mkdir templates/account
+The syntax of the command is incorrect.
+
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>touch templates/account/login.html
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Traceback (most recent call last):
+  File "D:\An3\IS\P1\manage.py", line 22, in <module>
+    main()
+  File "D:\An3\IS\P1\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\management\__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\An3\IS\P1\config\settings.py", line 64, in <module>
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+NameError: name 'os' is not defined
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Traceback (most recent call last):
+  File "D:\An3\IS\P1\manage.py", line 22, in <module>
+    main()
+  File "D:\An3\IS\P1\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\management\__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 82, in __getattr__
+    self._setup(name)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 69, in _setup
+    self._wrapped = Settings(settings_module)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\conf\__init__.py", line 170, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\An3\IS\P1\config\settings.py", line 65, in <module>
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+NameError: name 'os' is not defined
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:17:25
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /accounts/
+[29/Oct/2022 16:17:30] "GET /accounts/ HTTP/1.1" 404 5412
+D:\An3\IS\P1\config\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:18:46
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:19:03
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /accounts/
+[29/Oct/2022 16:19:09] "GET /accounts/ HTTP/1.1" 404 5412
+Not Found: /accounts/
+[29/Oct/2022 16:19:11] "GET /accounts/ HTTP/1.1" 404 5412
+Not Found: /accounts
+D:\An3\IS\P1\config\settings.py changed, reloading.
+[29/Oct/2022 16:20:34] "GET /accounts HTTP/1.1" 404 2072
+Traceback (most recent call last):
+  File "D:\An3\IS\P1\manage.py", line 22, in <module>
+    main()
+  File "D:\An3\IS\P1\manage.py", line 11, in main
+    from django.core.management import execute_from_command_line
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\utils\version.py", line 6, in <module>
+    from distutils.version import LooseVersion
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_distutils_hack\__init__.py", line 97, in find_spec
+    return method()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_distutils_hack\__init__.py", line 108, in spec_for_distutils
+    mod = importlib.import_module('setuptools._distutils')
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\setuptools\__init__.py", line 8, in <module>
+    import _distutils_hack.override  # noqa: F401
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_distutils_hack\override.py", line 1, in <module>
+    __import__('_distutils_hack').do_override()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_distutils_hack\__init__.py", line 77, in do_override
+    ensure_local_distutils()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_distutils_hack\__init__.py", line 63, in ensure_local_distutils
+    core = importlib.import_module('distutils.core')
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\setuptools\_distutils\core.py", line 22, in <module>
+    from distutils.dist import Distribution
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\_virtualenv.py", line 89, in exec_module
+    old(module)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\setuptools\_distutils\dist.py", line 10, in <module>
+    import pathlib
+  File "C:\Python310\lib\pathlib.py", line 1, in <module>
+    import fnmatch
+  File "C:\Python310\lib\fnmatch.py", line 13, in <module>
+    import posixpath
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1544, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+KeyboardInterrupt
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py startapp pages
+
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py startapp pages
+CommandError: 'pages' conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name.
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py startapp pages
+CommandError: 'pages' conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name.
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:25:31
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /accounts
+[29/Oct/2022 16:25:35] "GET /accounts HTTP/1.1" 404 2232
+Not Found: /accounts
+[29/Oct/2022 16:25:36] "GET /accounts HTTP/1.1" 404 2232
+[29/Oct/2022 16:25:40] "GET / HTTP/1.1" 200 112
+[29/Oct/2022 16:25:44] "GET /accounts/logout/ HTTP/1.1" 200 640
+[29/Oct/2022 16:26:18] "GET /accounts/logout/ HTTP/1.1" 200 640
+[29/Oct/2022 16:26:20] "POST /accounts/logout/ HTTP/1.1" 302 0
+[29/Oct/2022 16:26:20] "GET / HTTP/1.1" 200 145
+[29/Oct/2022 16:26:21] "GET /accounts/login/ HTTP/1.1" 200 540
+[29/Oct/2022 16:26:41] "GET / HTTP/1.1" 200 145
+[29/Oct/2022 16:26:44] "GET /accounts/login/ HTTP/1.1" 200 540
+[29/Oct/2022 16:26:48] "GET /accounts/signup/ HTTP/1.1" 200 524
+[29/Oct/2022 16:32:11] "GET /accounts/logout/ HTTP/1.1" 302 0
+[29/Oct/2022 16:32:11] "GET / HTTP/1.1" 200 145
+[29/Oct/2022 16:32:13] "GET /accounts/login/ HTTP/1.1" 200 540
+D:\An3\IS\P1\pages\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:32:39
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:32:42] "GET /accounts/login/ HTTP/1.1" 200 540
+[29/Oct/2022 16:32:43] "GET /accounts/login/ HTTP/1.1" 200 540
+D:\An3\IS\P1\pages\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:32:54
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:32:59] "GET /accounts/login/ HTTP/1.1" 200 540
+[29/Oct/2022 16:33:03] "GET / HTTP/1.1" 200 145
+D:\An3\IS\P1\pages\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:33:50
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:35:00
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:35:04] "GET / HTTP/1.1" 200 53386
+Not Found: /style.css
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:35:04] "GET /style.css HTTP/1.1" 404 2235
+Not Found: /assets/js/popper.min.js
+[29/Oct/2022 16:35:04] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:35:04] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:35:04] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:35:04] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:35:04] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:35:04] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:35:04] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:35:04] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:35:04] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:35:04] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Logo.png
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:35:04] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:35:04] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+[29/Oct/2022 16:35:04] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:35:04] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:35:04] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+[29/Oct/2022 16:35:04] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:35:04] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:35:04] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+[29/Oct/2022 16:35:04] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/ACLClogo.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:35:04] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Adrian.png
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:35:04] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:35:04] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.3.png
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:35:04] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+[29/Oct/2022 16:35:04] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:35:04] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:35:04] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:35:04] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:35:04] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:35:04] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:35:04] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:35:04] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:21] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/aos.css
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /style.css
+[29/Oct/2022 16:36:21] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:36:21] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:21] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:36:21] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/popper.min.js
+[29/Oct/2022 16:36:21] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+Not Found: /assets/js/bootstrap.min.js
+[29/Oct/2022 16:36:21] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:36:21] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:36:21] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:36:21] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:36:21] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+[29/Oct/2022 16:36:21] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:36:21] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Get Started.png
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /Imagini/Img2.png
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:36:21] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:36:21] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:36:21] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:36:21] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:36:21] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:36:21] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:36:21] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:36:21] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:36:21] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:36:21] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:21] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:36:21] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img2Footer.png
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:36:21] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:36:21] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:21] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:21] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/CIS_Petersburg.png
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:36:21] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:36:21] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+[29/Oct/2022 16:36:21] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:36:21] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Get Started.png
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:36:21] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:36:21] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:21] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:36:21] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:22] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/aos.css
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:36:22] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /style.css
+[29/Oct/2022 16:36:22] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:36:22] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/popper.min.js
+[29/Oct/2022 16:36:22] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:36:22] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/bootstrap.min.js
+[29/Oct/2022 16:36:22] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/java.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:36:22] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:36:22] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:36:22] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:36:22] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:36:22] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:36:22] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52624)
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:36:22] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /assets/css/swiper-bundle.min.css
+Traceback (most recent call last):
+[29/Oct/2022 16:36:22] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:36:22] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[29/Oct/2022 16:36:22] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+----------------------------------------
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:36:22] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:36:22] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:36:22] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:22] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+Not Found: /Imagini/Img6.2.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Adrian.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:36:22] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:36:22] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:22] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:22] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Tecumseh.png
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Dundee.png
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:22] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:22] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img2Footer.png
+Not Found: /Imagini/Img4Footer.png
+Not Found: /Imagini/Img3Footer.png
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:36:22] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:36:22] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:36:22] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:36:22] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/FBLogo.png
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:36:22] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:36:22] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:36:22] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:36:22] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:36:22] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:36:22] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+D:\An3\IS\P1\pages\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:36:48
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+D:\An3\IS\P1\pages\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:37:07
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:37:11] "GET / HTTP/1.1" 200 51517
+Not Found: /assets/css/aos.css
+Not Found: /style.css
+[29/Oct/2022 16:37:11] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:37:11] "GET /style.css HTTP/1.1" 404 2235
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:37:11] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:37:11] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/popper.min.js
+[29/Oct/2022 16:37:11] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+[29/Oct/2022 16:37:11] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:37:11] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:11] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/java.js
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:37:11] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:37:11] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:37:11] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:37:11] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+[29/Oct/2022 16:37:11] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:37:11] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/Background2.png
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:11] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:37:11] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:37:11] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:37:11] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/ACLClogo.png
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/Img6.2.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:37:11] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:37:11] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:37:11] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Dundee.png
+Not Found: /Imagini/Petersburg.png
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:37:11] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.1.png
+Not Found: /Imagini/Img8.2.png
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:37:11] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/YTLogo.png
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:37:11] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/TwitterLogo.png
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:37:11] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/FBLogo.png
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:37:11] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:11] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:11] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:37:11] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:37:12] "GET / HTTP/1.1" 200 51517
+Not Found: /assets/css/swiper-bundle.min.css
+Not Found: /style.css
+Not Found: /assets/css/aos.css
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:37:12] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:12] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:37:12] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+[29/Oct/2022 16:37:12] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:37:12] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:12] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+Not Found: /assets/js/java.js
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:37:12] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:37:12] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:37:12] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:37:12] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:37:12] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:37:12] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:37:12] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Img2.png
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+[29/Oct/2022 16:37:12] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:37:12] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/Background2.png
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:12] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:37:12] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:37:12] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:37:12] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:37:12] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:12] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+Not Found: /Imagini/Img2Footer.png
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:37:12] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:37:12] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:37:12] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:37:12] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:12] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:37:12] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+D:\An3\IS\P1\pages\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:39:32
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:39:32] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/aos.css
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Not Found: /style.css
+[29/Oct/2022 16:39:32] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:39:32] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+[29/Oct/2022 16:39:32] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:39:32] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:39:32] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:39:32] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:39:32] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:39:32] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:39:32] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:39:32] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+[29/Oct/2022 16:39:32] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/cc5b02c2a0.js
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:39:32] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:39:32] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:39:32] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:39:32] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:39:32] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:39:32] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:39:32] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:39:32] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+[29/Oct/2022 16:39:32] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:39:32] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+[29/Oct/2022 16:39:32] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:39:32] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:39:32] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:39:32] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:39:32] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:39:33] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:39:33] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:39:33] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:39:33] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background9.png
+Not Found: /Imagini/Img1Footer.png
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:39:33] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:39:33] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/inlogo.png
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:39:33] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:39:33] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:39:33] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+[29/Oct/2022 16:39:33] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:39:33] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:39:33] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:39:33] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:41:16] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /style.css
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:41:16] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:41:16] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:41:16] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+[29/Oct/2022 16:41:16] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Not Found: /assets/js/popper.min.js
+[29/Oct/2022 16:41:16] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/bootstrap.min.js
+[29/Oct/2022 16:41:16] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/java.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:41:16] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:41:16] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:41:16] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:41:16] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:41:17] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+----------------------------------------
+Not Found: /Imagini/Call.png
+Exception occurred during processing of request from ('127.0.0.1', 52674)
+[29/Oct/2022 16:41:17] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:41:17] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Get Started.png
+Traceback (most recent call last):
+[29/Oct/2022 16:41:17] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+Not Found: /Imagini/Live Chat.png
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+[29/Oct/2022 16:41:17] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+----------------------------------------
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:41:17] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:41:17] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:41:17] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:41:17] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+[29/Oct/2022 16:41:17] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:41:17] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:41:17] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:41:17] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:41:17] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.1.png
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:41:17] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:41:17] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+Not Found: /Imagini/Img8.3.png
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:41:17] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img2Footer.png
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:41:17] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:41:17] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:41:17] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:41:17] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:41:17] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:41:17] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+[29/Oct/2022 16:41:17] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:41:17] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:41:17] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:41:17] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:41:17] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:42:06] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /assets/css/swiper-bundle.min.css
+Not Found: /assets/css/aos.css
+Not Found: /style.css
+[29/Oct/2022 16:42:06] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:42:06] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:42:06] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+[29/Oct/2022 16:42:06] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:42:06] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:42:06] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:42:06] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+[29/Oct/2022 16:42:06] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:42:06] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:42:06] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /Imagini/Logo.png
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:42:06] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:42:06] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:42:06] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:42:06] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:42:06] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:42:06] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52673)
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Traceback (most recent call last):
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+Not Found: /Imagini/lenaweelogo.png
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[29/Oct/2022 16:42:06] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+Not Found: /Imagini/MDA_logo.png
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+[29/Oct/2022 16:42:06] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:42:06] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Habitat_for_humanity.png
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+Not Found: /assets/css/aos.css
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[29/Oct/2022 16:42:06] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+----------------------------------------
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:42:06] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+[29/Oct/2022 16:42:06] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:42:06] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:42:06] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Petersburg.png
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:42:06] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:42:06] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:42:06] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:42:06] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:42:06] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:42:06] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:42:06] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:42:06] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:42:06] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:42:06] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:42:06] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:42:06] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:42:06] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /assets/css/swiper-bundle.min.css
+Not Found: /style.css
+[29/Oct/2022 16:44:00] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:44:00] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+[29/Oct/2022 16:44:00] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:44:00] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:44:00] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/bootstrap.min.js
+[29/Oct/2022 16:44:00] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:44:00] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:44:00] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:44:00] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:44:00] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:44:00] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /assets/css/bootstrap.min.css
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:44:00] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:44:00] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:44:00] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Img2.png
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/Promedica Logo.png
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:44:00] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:44:00] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:44:00] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:44:00] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+[29/Oct/2022 16:44:00] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:44:00] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+[29/Oct/2022 16:44:00] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Adrian.png
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:44:00] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:44:00] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:44:00] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+Not Found: /Imagini/Img1Footer.png
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/FBLogo.png
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:44:00] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:44:00] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:44:00] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:44:00] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:44:00] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:44:00] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:44:00] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:44:00] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:44:00] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:45:17] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/swiper-bundle.min.css
+Not Found: /style.css
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:45:17] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/css/bootstrap.min.css
+----------------------------------------
+[29/Oct/2022 16:45:17] "GET /style.css HTTP/1.1" 404 2235
+Not Found: /assets/js/popper.min.js
+Exception occurred during processing of request from ('127.0.0.1', 52682)
+[29/Oct/2022 16:45:17] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Traceback (most recent call last):
+[29/Oct/2022 16:45:17] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+[29/Oct/2022 16:45:17] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+Not Found: /assets/js/bootstrap.min.js
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:45:17] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+[29/Oct/2022 16:45:17] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[29/Oct/2022 16:45:17] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/java.js
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:45:17] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:45:17] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+----------------------------------------
+Not Found: /assets/js/cc5b02c2a0.js
+Exception occurred during processing of request from ('127.0.0.1', 52672)
+[29/Oct/2022 16:45:17] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Traceback (most recent call last):
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:45:17] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[29/Oct/2022 16:45:17] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+Not Found: /Imagini/Img2.png
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[29/Oct/2022 16:45:17] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+----------------------------------------
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:45:17] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:45:17] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Promedica Logo.png
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:45:17] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:45:17] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:45:17] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:45:17] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:45:17] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Img6.1.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:45:17] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:45:17] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+[29/Oct/2022 16:45:17] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:45:17] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:45:17] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:45:17] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Get Started.png
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:45:17] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:45:17] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:45:17] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:46:12] "GET / HTTP/1.1" 200 53386
+Not Found: /assets/css/swiper-bundle.min.css
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:46:12] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /style.css
+[29/Oct/2022 16:46:12] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:46:12] "GET /style.css HTTP/1.1" 404 2235
+[29/Oct/2022 16:46:12] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:46:12] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:46:12] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:46:12] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+[29/Oct/2022 16:46:12] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:46:12] "GET /assets/js/java.js HTTP/1.1" 404 2259
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:46:12] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:46:12] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:46:12] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:46:12] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:46:12] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:46:12] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:46:12] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Img2.png
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:46:12] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:46:12] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:46:12] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:46:12] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:46:12] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:46:12] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:46:12] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:46:12] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:46:13] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:46:13] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:46:13] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Img6.2.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Adrian.png
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:13] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.3.png
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:46:13] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/FBLogo.png
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+[29/Oct/2022 16:46:13] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:46:13] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:46:13] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+[29/Oct/2022 16:46:13] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/MDA_logo.png
+Not Found: /Imagini/Habitat_for_humanity.png
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:46:13] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:46:13] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:46:13] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+[29/Oct/2022 16:46:13] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background1.png
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:46:13] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:46:13] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:46:13] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:46:38] "GET / HTTP/1.1" 200 53981
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+Not Found: /assets/js/bootstrap.min.js
+[29/Oct/2022 16:46:38] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:46:38] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:46:38] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:46:38] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:46:38] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:46:38] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52681)
+Traceback (most recent call last):
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+Not Found: /Imagini/Get Started.png
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+Not Found: /Imagini/Call.png
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+[29/Oct/2022 16:46:38] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Not Found: /assets/js/cc5b02c2a0.js
+----------------------------------------
+[29/Oct/2022 16:46:38] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:46:38] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/ImgCasa.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+[29/Oct/2022 16:46:38] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:46:38] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:46:38] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+[29/Oct/2022 16:46:38] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:46:38] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img6.2.png
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:38] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:38] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.2.png
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Img2Footer.png
+Not Found: /Imagini/Img1Footer.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:38] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:38] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:46:38] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/TwitterLogo.png
+Not Found: /Imagini/FBLogo.png
+Not Found: /Imagini/inlogo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:46:38] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:46:38] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:46:38] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /Imagini/lenaweelogo.png
+Not Found: /Imagini/Promedica Logo.png
+Not Found: /Imagini/The_Salvation_Army.png
+[29/Oct/2022 16:46:39] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:46:39] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/CIS_Petersburg.png
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:46:39] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:46:39] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+[29/Oct/2022 16:46:39] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.2.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:46:39] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.3.png
+Not Found: /Imagini/Img8.1.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background2.png
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background6.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:46:39] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:46:39] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:46:39] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+[29/Oct/2022 16:48:10] "GET / HTTP/1.1" 200 53390
+Not Found: /assets/css/aos.css
+Not Found: /style.css
+[29/Oct/2022 16:48:10] "GET /style.css HTTP/1.1" 404 2235
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:48:10] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:48:10] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+[29/Oct/2022 16:48:10] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /assets/js/bootstrap.min.js
+Not Found: /assets/js/popper.min.js
+Not Found: /assets/js/swiper-bundle.min.js
+[29/Oct/2022 16:48:10] "GET /assets/js/bootstrap.min.js HTTP/1.1" 404 2286
+Not Found: /assets/js/jquery-3.2.1.slim.min.js
+[29/Oct/2022 16:48:10] "GET /assets/js/popper.min.js HTTP/1.1" 404 2277
+Not Found: /assets/js/java.js
+[29/Oct/2022 16:48:10] "GET /assets/js/swiper-bundle.min.js HTTP/1.1" 404 2298
+[29/Oct/2022 16:48:10] "GET /assets/js/jquery-3.2.1.slim.min.js HTTP/1.1" 404 2310
+Not Found: /assets/js/aos.js
+[29/Oct/2022 16:48:10] "GET /assets/js/java.js HTTP/1.1" 404 2259
+[29/Oct/2022 16:48:10] "GET /assets/js/aos.js HTTP/1.1" 404 2256
+Not Found: /Imagini/Logo.png
+Not Found: /assets/js/cc5b02c2a0.js
+[29/Oct/2022 16:48:10] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Call.png
+[29/Oct/2022 16:48:10] "GET /assets/js/cc5b02c2a0.js HTTP/1.1" 404 2277
+Not Found: /Imagini/Live Chat.png
+Not Found: /assets/css/bootstrap.min.css
+[29/Oct/2022 16:48:10] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+Not Found: /Imagini/Img2.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+[29/Oct/2022 16:48:10] "GET /assets/css/bootstrap.min.css HTTP/1.1" 404 2292
+Not Found: /Imagini/ImgCasa.png
+----------------------------------------
+[29/Oct/2022 16:48:10] "GET /Imagini/Img2.png HTTP/1.1" 404 2256
+Exception occurred during processing of request from ('127.0.0.1', 52678)
+Not Found: /Imagini/Promedica Logo.png
+Traceback (most recent call last):
+Not Found: /Imagini/lenaweelogo.png
+  File "C:\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python310\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+[29/Oct/2022 16:48:10] "GET /Imagini/ImgCasa.png HTTP/1.1" 404 2265
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\servers\basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+[29/Oct/2022 16:48:10] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Not Found: /Imagini/The_Salvation_Army.png
+----------------------------------------
+[29/Oct/2022 16:48:10] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+Not Found: /assets/css/swiper-bundle.min.css
+[29/Oct/2022 16:48:10] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:48:10] "GET /assets/css/swiper-bundle.min.css HTTP/1.1" 404 2304
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:48:10] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/Img6.1.png
+[29/Oct/2022 16:48:10] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img6.2.png
+Not Found: /assets/css/aos.css
+[29/Oct/2022 16:48:10] "GET /Imagini/Img6.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Adrian.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img6.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Blissfield.png
+[29/Oct/2022 16:48:10] "GET /assets/css/aos.css HTTP/1.1" 404 2262
+Not Found: /Imagini/Dundee.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Adrian.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Petersburg.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Dundee.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:48:10] "GET /Imagini/Blissfield.png HTTP/1.1" 404 2274
+[29/Oct/2022 16:48:10] "GET /Imagini/Petersburg.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Tecumseh.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Tecumseh.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Img8.2.png
+Not Found: /Imagini/Img8.1.png
+Not Found: /Imagini/Img8.3.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img8.2.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Get Started.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img8.1.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Background9.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img8.3.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:48:10] "GET /Imagini/Get%20Started.png HTTP/1.1" 404 2279
+Not Found: /Imagini/Img1Footer.png
+Not Found: /Imagini/Img2Footer.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Background9.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:48:10] "GET /Imagini/Img2Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img3Footer.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img1Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/YTLogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img3Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/Img4Footer.png
+[29/Oct/2022 16:48:10] "GET /Imagini/YTLogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/inlogo.png
+Not Found: /Imagini/FBLogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Img4Footer.png HTTP/1.1" 404 2274
+Not Found: /Imagini/TwitterLogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/inlogo.png HTTP/1.1" 404 2262
+Not Found: /Imagini/Promedica Logo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/FBLogo.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:48:10] "GET /Imagini/TwitterLogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background2.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Promedica%20Logo.png HTTP/1.1" 404 2288
+Not Found: /Imagini/Background1.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Background2.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:48:10] "GET /Imagini/Background1.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Goodwill_Industries_Logo.png
+Not Found: /Imagini/The_Salvation_Army.png
+Not Found: /Imagini/lenaweelogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/The_Salvation_Army.png HTTP/1.1" 404 2298
+Not Found: /Imagini/MDA_logo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Goodwill_Industries_Logo.png HTTP/1.1" 404 2316
+[29/Oct/2022 16:48:10] "GET /Imagini/lenaweelogo.png HTTP/1.1" 404 2277
+Not Found: /Imagini/CIS_Petersburg.png
+[29/Oct/2022 16:48:10] "GET /Imagini/MDA_logo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Habitat_for_humanity.png
+[29/Oct/2022 16:48:10] "GET /Imagini/CIS_Petersburg.png HTTP/1.1" 404 2286
+Not Found: /Imagini/Call.png
+Not Found: /Imagini/Live Chat.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Habitat_for_humanity.png HTTP/1.1" 404 2304
+Not Found: /Imagini/ACLClogo.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Call.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:48:10] "GET /Imagini/Live%20Chat.png HTTP/1.1" 404 2273
+Not Found: /Imagini/Background5.png
+[29/Oct/2022 16:48:10] "GET /Imagini/ACLClogo.png HTTP/1.1" 404 2268
+Not Found: /Imagini/Background6.png
+Not Found: /Imagini/Background7.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Background5.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:48:10] "GET /Imagini/Background6.png HTTP/1.1" 404 2277
+Not Found: /Imagini/Background10.png
+[29/Oct/2022 16:48:10] "GET /Imagini/Background7.png HTTP/1.1" 404 2277
+[29/Oct/2022 16:48:10] "GET /Imagini/Background10.png HTTP/1.1" 404 2280
+D:\An3\IS\P1\pages\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 29, 2022 - 16:49:23
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Oct/2022 16:49:38] "GET / HTTP/1.1" 200 145
+[29/Oct/2022 16:50:12] "GET / HTTP/1.1" 200 1223
+[29/Oct/2022 16:51:00] "GET / HTTP/1.1" 200 1339
+[29/Oct/2022 16:52:54] "GET / HTTP/1.1" 200 4824
+Not Found: /Imagini/Logo.png
+[29/Oct/2022 16:52:54] "GET /Imagini/Logo.png HTTP/1.1" 404 2256
+[29/Oct/2022 16:53:37] "GET / HTTP/1.1" 200 2940
+[29/Oct/2022 16:55:16] "GET / HTTP/1.1" 200 2994
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:55:16] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:55:25] "GET / HTTP/1.1" 200 2984
+Not Found: /Lab4.png
+[29/Oct/2022 16:55:25] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 16:55:27] "GET / HTTP/1.1" 200 2984
+Not Found: /Lab4.png
+[29/Oct/2022 16:55:27] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 16:55:49] "GET / HTTP/1.1" 200 3007
+[29/Oct/2022 16:55:50] "GET / HTTP/1.1" 200 3007
+[29/Oct/2022 16:55:51] "GET / HTTP/1.1" 200 3007
+[29/Oct/2022 16:55:51] "GET / HTTP/1.1" 200 3007
+[29/Oct/2022 16:55:59] "GET / HTTP/1.1" 200 2987
+[29/Oct/2022 16:56:00] "GET / HTTP/1.1" 200 2987
+[29/Oct/2022 16:56:23] "GET / HTTP/1.1" 200 2974
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:56:23] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:56:24] "GET / HTTP/1.1" 200 2974
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:56:24] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:56:25] "GET / HTTP/1.1" 200 2974
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:56:25] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:56:25] "GET / HTTP/1.1" 200 2974
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:56:25] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:56:37] "GET / HTTP/1.1" 200 2964
+Not Found: /Lab4.png
+[29/Oct/2022 16:56:37] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 16:56:38] "GET / HTTP/1.1" 200 2964
+Not Found: /Lab4.png
+[29/Oct/2022 16:56:38] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 16:58:36] "GET / HTTP/1.1" 200 3002
+[29/Oct/2022 16:59:01] "GET / HTTP/1.1" 200 3001
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:59:01] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:59:02] "GET / HTTP/1.1" 200 3001
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:59:02] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:59:17] "GET / HTTP/1.1" 200 2978
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:59:17] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:59:19] "GET / HTTP/1.1" 200 2978
+Not Found: /templates/Lab4.png
+[29/Oct/2022 16:59:19] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 16:59:53] "GET / HTTP/1.1" 200 2991
+[29/Oct/2022 16:59:54] "GET / HTTP/1.1" 200 2991
+[29/Oct/2022 16:59:55] "GET / HTTP/1.1" 200 2991
+[29/Oct/2022 16:59:55] "GET / HTTP/1.1" 200 2991
+[29/Oct/2022 17:00:15] "GET / HTTP/1.1" 200 2990
+[29/Oct/2022 17:00:16] "GET / HTTP/1.1" 200 2990
+[29/Oct/2022 17:00:17] "GET / HTTP/1.1" 200 2990
+[29/Oct/2022 17:00:17] "GET / HTTP/1.1" 200 2990
+[29/Oct/2022 17:00:22] "GET / HTTP/1.1" 200 2990
+[29/Oct/2022 17:00:38] "GET / HTTP/1.1" 200 2978
+Not Found: /templates/Lab4.png
+[29/Oct/2022 17:00:38] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 17:00:39] "GET / HTTP/1.1" 200 2978
+Not Found: /templates/Lab4.png
+[29/Oct/2022 17:00:39] "GET /templates/Lab4.png HTTP/1.1" 404 2262
+[29/Oct/2022 17:01:13] "GET / HTTP/1.1" 200 2967
+Not Found: /Lab4.png
+[29/Oct/2022 17:01:13] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 17:01:14] "GET / HTTP/1.1" 200 2967
+Not Found: /Lab4.png
+[29/Oct/2022 17:01:14] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 17:01:14] "GET / HTTP/1.1" 200 2967
+Not Found: /Lab4.png
+[29/Oct/2022 17:01:14] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 17:01:15] "GET / HTTP/1.1" 200 2967
+Not Found: /Lab4.png
+[29/Oct/2022 17:01:15] "GET /Lab4.png HTTP/1.1" 404 2232
+[29/Oct/2022 17:02:13] "GET / HTTP/1.1" 200 3062
+
+
+
+
+D:\An3\IS\P1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://127.0.0.1:8000/accounts/login/.
+
+
+osoft Windows [Version 10.0.22621.819]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\An3\IS\P1>pip install django-allauth~=0.42.0
+Defaulting to user installation because normal site-packages is not writeable
+Collecting django-allauth~=0.42.0
+  Using cached django_allauth-0.42.0-py3-none-any.whl
+Collecting requests
+  Using cached requests-2.28.1-py3-none-any.whl (62 kB)
+Collecting python3-openid>=3.0.8
+  Using cached python3_openid-3.2.0-py3-none-any.whl (133 kB)
+Requirement already satisfied: Django>=2.0 in c:\python310\lib\site-packages (from django-allauth~=0.42.0) (4.1.2)
+Collecting requests-oauthlib>=0.3.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: tzdata in c:\python310\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (2022.5)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\python310\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (0.4.3)
+Requirement already satisfied: asgiref<4,>=3.5.2 in c:\python310\lib\site-packages (from Django>=2.0->django-allauth~=0.42.0) (3.5.2)
+Collecting defusedxml
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\vasil\appdata\roaming\python\python310\site-packages (from requests->django-allauth~=0.42.0) (2022.9.24)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting charset-normalizer<3,>=2
+  Using cached charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+Installing collected packages: urllib3, oauthlib, idna, defusedxml, charset-normalizer, requests, python3-openid, requests-oauthlib, django-allauth
+  WARNING: The script normalizer.exe is installed in 'C:\Users\vasil\AppData\Roaming\Python\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed charset-normalizer-2.1.1 defusedxml-0.7.1 django-allauth-0.42.0 idna-3.4 oauthlib-3.2.2 python3-openid-3.2.0 requests-2.28.1 requests-oauthlib-1.3.1 urllib3-1.26.12
+
+[notice] A new release of pip available: 22.3 -> 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+D:\An3\IS\P1>python manage.py migrate
+Traceback (most recent call last):
+  File "D:\An3\IS\P1\manage.py", line 22, in <module>
+    main()
+  File "D:\An3\IS\P1\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Python310\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Python310\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Python310\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Python310\lib\site-packages\django\apps\config.py", line 123, in create
+    mod = import_module(mod_path)
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\An3\IS\P1\accounts\apps.py", line 4, in <module>
+    from django.contrib.auth.admin import UserAdmin
+  File "C:\Python310\lib\site-packages\django\contrib\auth\admin.py", line 6, in <module>
+    from django.contrib.auth.forms import (
+  File "C:\Python310\lib\site-packages\django\contrib\auth\forms.py", line 6, in <module>
+    from django.contrib.auth.models import User
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 3, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "C:\Python310\lib\site-packages\django\contrib\auth\base_user.py", line 49, in <module>
+    class AbstractBaseUser(models.Model):
+  File "C:\Python310\lib\site-packages\django\db\models\base.py", line 127, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 138, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+
+D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python310\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Python310\lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Python310\lib\site-packages\django\core\management\__init__.py", line 398, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Python310\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Python310\lib\site-packages\django\apps\config.py", line 123, in create
+    mod = import_module(mod_path)
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\An3\IS\P1\accounts\apps.py", line 4, in <module>
+    from django.contrib.auth.admin import UserAdmin
+  File "C:\Python310\lib\site-packages\django\contrib\auth\admin.py", line 6, in <module>
+    from django.contrib.auth.forms import (
+  File "C:\Python310\lib\site-packages\django\contrib\auth\forms.py", line 6, in <module>
+    from django.contrib.auth.models import User
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 3, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "C:\Python310\lib\site-packages\django\contrib\auth\base_user.py", line 49, in <module>
+    class AbstractBaseUser(models.Model):
+  File "C:\Python310\lib\site-packages\django\db\models\base.py", line 127, in __new__
+    app_config = apps.get_containing_app_config(module)
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "C:\Python310\lib\site-packages\django\apps\registry.py", line 138, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+
+D:\An3\IS\P1>
+D:\An3\IS\P1>
+D:\An3\IS\P1>
+D:\An3\IS\P1>python -m pipenv shell
+Launching subshell in virtual environment...
+Microsoft Windows [Version 10.0.22621.819]
+(c) Microsoft Corporation. All rights reserved.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pipenv install django~=3.1.0
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pip install django~=3.1.0
+Requirement already satisfied: django~=3.1.0 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (3.1.14)
+Requirement already satisfied: pytz in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from django~=3.1.0) (2022.5)
+Requirement already satisfied: asgiref<4,>=3.2.10 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from django~=3.1.0) (3.5.2)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\vasil\.virtualenvs\p1-qv8lnru9\lib\site-packages (from django~=3.1.0) (0.4.3)
+
+(P1-qv8LNru9) D:\An3\IS\P1>pipenv shell
+'pipenv' is not recognized as an internal or external command,
+operable program or batch file.
+
+(P1-qv8LNru9) D:\An3\IS\P1>pip shell
+ERROR: unknown command "shell" - maybe you meant "help"
+
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 12, 2022 - 21:58:45
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[12/Nov/2022 21:58:56] "GET / HTTP/1.1" 200 3061
+Not Found: /favicon.ico
+[12/Nov/2022 21:58:57] "GET /favicon.ico HTTP/1.1" 404 2241
+Not Found: /dashboard
+[12/Nov/2022 21:59:04] "GET /dashboard HTTP/1.1" 404 2235
+Not Found: /login
+[12/Nov/2022 21:59:11] "GET /login HTTP/1.1" 404 2223
+Not Found: /accounts
+[12/Nov/2022 23:16:59] "GET /accounts HTTP/1.1" 404 2232
+[12/Nov/2022 23:17:11] "GET /admin HTTP/1.1" 301 0
+[12/Nov/2022 23:17:11] "GET /admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:17:11] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194
+[12/Nov/2022 23:17:12] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2138
+[12/Nov/2022 23:17:12] "GET /static/admin/css/login.css HTTP/1.1" 200 1185
+[12/Nov/2022 23:17:12] "GET /static/admin/css/base.css HTTP/1.1" 200 16307
+[12/Nov/2022 23:17:12] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18344
+[12/Nov/2022 23:17:12] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[12/Nov/2022 23:17:12] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[12/Nov/2022 23:17:12] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[12/Nov/2022 23:17:12] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[12/Nov/2022 23:17:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:17:25] "GET /admin/ HTTP/1.1" 200 5903
+[12/Nov/2022 23:17:25] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[12/Nov/2022 23:17:25] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[12/Nov/2022 23:17:25] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[12/Nov/2022 23:17:25] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[12/Nov/2022 23:17:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:17:38] "GET /admin/ HTTP/1.1" 200 5903
+Not Found: /accounta
+[12/Nov/2022 23:17:57] "GET /accounta HTTP/1.1" 404 2232
+Not Found: /accounts
+[12/Nov/2022 23:18:01] "GET /accounts HTTP/1.1" 404 2232
+Not Found: /accounts/
+[12/Nov/2022 23:18:15] "GET /accounts/ HTTP/1.1" 404 5572
+Not Found: /accounts
+[12/Nov/2022 23:18:24] "GET /accounts HTTP/1.1" 404 2232
+[12/Nov/2022 23:18:32] "GET /admin/ HTTP/1.1" 200 5903
+Not Found: /accounts/
+[12/Nov/2022 23:18:38] "GET /accounts/ HTTP/1.1" 404 5572
+[12/Nov/2022 23:18:44] "GET /admin/ HTTP/1.1" 200 5903
+[12/Nov/2022 23:18:49] "GET / HTTP/1.1" 200 3028
+[12/Nov/2022 23:18:53] "GET /admin/ HTTP/1.1" 200 5903
+[12/Nov/2022 23:19:03] "GET /admin/logout/ HTTP/1.1" 200 1509
+[12/Nov/2022 23:19:05] "GET /admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:19:05] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194
+[12/Nov/2022 23:19:07] "GET /admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:19:07] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194
+[12/Nov/2022 23:19:20] "GET / HTTP/1.1" 200 3061
+D:\An3\IS\P1\pages\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 12, 2022 - 23:21:32
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[12/Nov/2022 23:21:32] "GET / HTTP/1.1" 200 249
+Method Not Allowed (POST): /
+Method Not Allowed: /
+[12/Nov/2022 23:21:36] "POST / HTTP/1.1" 405 0
+D:\An3\IS\P1\pages\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 12, 2022 - 23:21:51
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\vasil\.virtualenvs\P1-qv8LNru9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+[12/Nov/2022 23:22:00] "GET / HTTP/1.1" 500 79894
+D:\An3\IS\P1\pages\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 12, 2022 - 23:23:11
+Django version 3.1.14, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[12/Nov/2022 23:23:12] "GET / HTTP/1.1" 200 3061
+[12/Nov/2022 23:23:51] "GET / HTTP/1.1" 200 3060
+[12/Nov/2022 23:27:01] "GET /accounts/login/ HTTP/1.1" 200 540
+[12/Nov/2022 23:27:06] "POST /accounts/login/ HTTP/1.1" 302 0
+[12/Nov/2022 23:27:06] "GET / HTTP/1.1" 200 3027
+[12/Nov/2022 23:28:55] "GET /accounts/login/ HTTP/1.1" 302 0
+[12/Nov/2022 23:28:55] "GET / HTTP/1.1" 200 3027
+[12/Nov/2022 23:29:05] "GET /accounts/login/ HTTP/1.1" 302 0
+[12/Nov/2022 23:29:05] "GET / HTTP/1.1" 200 3027
+[12/Nov/2022 23:29:12] "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:29:12] "GET /admin/ HTTP/1.1" 200 6041
+[12/Nov/2022 23:29:12] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[12/Nov/2022 23:29:12] "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[12/Nov/2022 23:29:12] "GET /admin/ HTTP/1.1" 200 5903
+[12/Nov/2022 23:29:16] "GET /accounts/login/ HTTP/1.1" 302 0
+[12/Nov/2022 23:29:16] "GET / HTTP/1.1" 200 3027
+[12/Nov/2022 23:29:25] "GET /accounts/login/ HTTP/1.1" 302 0
+[12/Nov/2022 23:29:25] "GET / HTTP/1.1" 200 3027
+
+
+
+
+00000000000000000000000000000000000000000000000000
+
+in: C:\Windows\System32\cmd.exe
+
+
+http://127.0.0.1:8000/accounts/login/.
+
+http://127.0.0.1:8000/admin/
+
+D:\An3\IS\P1>python -m pipenv shell
+(P1-qv8LNru9) D:\An3\IS\P1>pip shell
+(P1-qv8LNru9) D:\An3\IS\P1>python manage.py runserver
+
+
+http://127.0.0.1:8000/
+

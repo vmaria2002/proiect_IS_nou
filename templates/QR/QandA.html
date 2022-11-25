@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Send Email</title>
+  </head>
+  <body>
+    {% comment %} aici modifici sa nu mai ai pagina urata {% endcomment %}
+    {% if messageSent %}
+    
+    <div class="container"><br></br>
+      {% comment %} <div class="alert alert-success" role="alert">
+        Email successfully sent <a href="#" class="alert-link"></a>
+      </div>
+     </div> {% endcomment %}
+     <div class="p-1">
+      <a href="{% url 'home' %}" class="btn btn-success btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter in your account" tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-home"></i>Home</a>
+  </div> 
+    <div class="card">
+      <div class="card-body">
+      
+        <p class="card-text"><div class="alert alert-success" role="alert">
+          Email successfully sent <a href="#" class="alert-link"></a>
+        </div></p>
+      
+      </div><div class="col-md-4">
+      <img src="https://thumbs.dreamstime.com/b/send-us-message-glassy-green-round-button-isolated-abstract-illustration-97495097.jpg" class="card-img-bottom">
+    </div>
+  </div>
+
+    {% else %}
+   
+    <div class="card mb-7" style="max-width: 940px;">
+      <div class="row g-7">
+        <div class="col-md-4">
+          <a href="{% url 'home' %}"><img src="https://th.bing.com/th/id/OIP.JFqT7KZtRP-EYjpJVVfqyQHaEU?pid=ImgDet&w=1200&h=700&rs=1" class="img-fluid center"></a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"> <div class="alert alert-primary" role="alert">
+              Send an E-mail about CV issue<a href="#" class="alert-link"></a>
+</div></h5>
+            <p class="card-text">
+
+
+              <h1>Contact Us</h1>
+              <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}<div class="form-row">
+  <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
+    <label for="attach" class="form-label">Please attach your CV / resume in PDF format</label>
+    <input type="file" name="attach" id="attach" onchange="return fileValidation()" accept="application/pdf,application/vnd.ms-excel" class="form-control" required>
+  </div>
+</div>
+                  <div class="form-actions">
+                    <button type="submit">Send</button>
+                  </div>
+              </form>
+
+
+            </p>
+              </div>
+        </div>
+      </div>
+   
+{% comment %}    
+    <div class="container">
+      <div class="alert alert-primary" role="alert">
+                         Send an E-mail about CV issue<a href="#" class="alert-link"></a>
+      </div> {% endcomment %}
+      
+      
+      {% comment %} <form method="post">
+      
+        <input type="hidden" name="csrfmiddlewaretoken" value="vgyNsxCvRbmRfArHBNaJJBYrCsDbF2AZtkmKLZ20rbocnU0dcSZN1uM3IQXfYrLL"> <p><label for="id_recipient">Email:</label> <input type="email" name="recipient" required id="id_recipient"></p>
+<p><label for="id_message">Message:</label> <textarea name="message" cols="40" rows="10" required id="id_message">
+</textarea></p>
+
+
+        <br />
+        <div class="text-center">
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg"
+            style="width: 100%"
+            value="Send e-mail"
+          />
+        </div>
+      </form> {% endcomment %}
+    </div>
+    {% endif %}
+  </body>
+</html>
