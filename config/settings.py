@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount', # new
     # Local
     'accounts',  # new
-'pages', # new
+    'pages', # new
 ]
 
 MIDDLEWARE = [

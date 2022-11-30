@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ titleCV }}</title>
+    
     <link type="image/x-icon" rel="shortcut icon" href="{% static 'img/cv.ico' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/responsive.css' %}">
@@ -20,15 +21,15 @@
     <div class="general__area">
         <div class="top__area">
             <div class="bio__area">
-                <div class="photo__area"><img src="{% static 'img/photo3.png' %}" alt="{{ yourName | safe }}" /></div>
+                <div class="photo__area"><img src={{attach}} /></div>
                 <div class="info__area">
-                    <p class="name">{{ yourName }}</p>
-                    <p class="profession">{{ yourProfession }}</p>
-                    <p class="bio">{{ yourBio }}</p>
-                </div>
+                    <p class="prenume">Name: {{ prenume }}</p>
+                    <p class="profession">Profession: {{ profession }}</p>
+                    <p class="bio">The Current Job: {{ yourBio }}</p>
+               </div>
             </div>
             <div class="personal__area">
-                <p class="country">{{ yourCountry }}</p>
+                <p class="country">Country: {{ yourCountry }}</p>
                 <div class="social__area">
                     {{ yourContact | safe }}
                 </div>
@@ -83,11 +84,13 @@
             </div>
         </div>
     </div>
-    <footer>{{ footerText | safe }}</footer>
+
+    <a class ="btn btn-primary" href="{%url 'pdf_report_create' %}"> Create PDF </a>
+   
+        <footer>{{ footerText | safe }}</footer>
     <script type="text/javascript" src="{% static 'js/vanilla-tilt.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
-    {% comment %} <a href="/myCV/downloadFile/" class="btn2 btn-success btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download File" tabindex="-1" role="button" aria-disabled="true"></i>Download File</a>
-     {% endcomment %}
+    
     <br></br>
 </body>
 

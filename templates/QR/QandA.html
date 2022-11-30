@@ -56,15 +56,15 @@
               <form method="post">
                   {% csrf_token %}
                   {{ form.as_p }}<div class="form-row">
-  <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
-    <label for="attach" class="form-label">Please attach your CV / resume in PDF format</label>
-    <input type="file" name="attach" id="attach" onchange="return fileValidation()" accept="application/pdf,application/vnd.ms-excel" class="form-control" required>
-  </div>
-</div>
-                  <div class="form-actions">
-                    <button type="submit">Send</button>
-                  </div>
-              </form>
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
+                <label for="attach" class="form-label">Please attach your CV / resume in PDF format</label>
+  <input type="file" name="attach" id="attach" onchange="return fileValidation()" accept="application/pdf,application/vnd.ms-excel" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit">Send</button>
+          </div>
+      </form>
 
 
             </p>

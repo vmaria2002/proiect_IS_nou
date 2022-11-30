@@ -10,39 +10,42 @@
     <link type="image/x-icon" rel="shortcut icon" href="{% static 'img/cv.ico' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="p-4">
-        <br></br>
-        <a href="{% url 'home' %}" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter in your account" tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-home"></i>Home</a>
-    </div> 
+      <div class="alert alert-primary" role="alert">
+                CV
+     </div>
     <div class="general__area">
         <div class="top__area">
             <div class="bio__area">
-                <div class="photo__area"><img src="{% static 'img/photo3.png' %}" alt="{{ yourName | safe }}" /></div>
+                <div class="photo__area"><img url="{% static 'img/photo3.png' %}" alt="{{ yourName | safe }}" /></div>
                 <div class="info__area">
-                    <p class="name">{{ yourName }}</p>
-                    <p class="profession">{{ yourProfession }}</p>
-                    <p class="bio">{{ yourBio }}</p>
+                    <p class="name"><br></br>Nume si Prenume: {{ yourName }}</p>
+                    <p class="profession">Your Profession {{ profession }}</p>
+                    <p class="bio">Your Bio: {{ yourBio }}</p>
                 </div>
             </div>
+            
             <div class="personal__area">
                 <p class="country">{{ yourCountry }}</p>
                 <div class="social__area">
-                    {{ yourContact | safe }}
+                    <br></br>Your Contact: {{ yourContact | safe }}
                 </div>
                 <p class="birth__date">{{ yourBirthday }}</p>
             </div>
             <div class="exp__area">
                 {% if yourSkills %}
+                <br></br> Your Skills: 
                 <div class="exp__box">
                     <ol aria-label="Skills">
-                        {{ yourSkills | safe }}
+                         {{ yourSkills | safe }}
                     </ol>
                 </div>
                 {% endif %}
                 {% if yourHobbies %}
+                <br></br>Your Hobbies
                 <div class="exp__box">
                     <ol aria-label="Hobbies">
                         {{ yourHobbies | safe }}
@@ -55,6 +58,7 @@
         <div class="mid__area">
             <div class="status__area">
                 {% if yourEdu %}
+                <br></br>Your Edu
                 <div class="education__area">
                     <ol aria-label="Education">
                         {{ yourEdu | safe }}
@@ -62,6 +66,7 @@
                 </div>
                 {% endif %}
                 {% if yourWork %}
+                <br></br>Your Work
                 <div class="work__area">
                     <ol aria-label="Work">
                         {{ yourWork | safe }}
@@ -72,6 +77,7 @@
         </div>
         <div class="bottom__area">
             <div class="history__area">
+                <br></br>Your Project
                 {% if yourProject %}
                 <div class="project__area">
                     <ol aria-label="Projects">
@@ -84,8 +90,8 @@
         </div>
     </div>
     <footer>{{ footerText | safe }}</footer>
-    <script type="text/javascript" src="{% static 'js/vanilla-tilt.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
+    <script type="text/javascript" src="/static/js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="/static/js/parallax.js"></script>
     {% comment %} <a href="/myCV/downloadFile/" class="btn2 btn-success btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download File" tabindex="-1" role="button" aria-disabled="true"></i>Download File</a>
      {% endcomment %}
     <br></br>

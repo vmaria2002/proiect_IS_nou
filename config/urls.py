@@ -21,13 +21,21 @@ from .views import newCV
 from .views import myCv
 from .views import qr
 from .views import qaa
+from .views import index
+from .views import validate
+from .views import downloadFile
+from .views import pdf_report_create
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls')),  # new
-    path('cv/', newCV),
+    # # path('cv/', newCV),
     path('myCV/', myCv),
     path('qr/', qr),
-    path('qaa/', qaa)
+    path('qaa/', qaa),
+    path('downloadFile/', downloadFile),
     # path("",include("sendemail.urls"))
+    path('cv/', index, name = 'index'), #index= padina care se completeaza
+    path('cv/validate', validate, name = 'validate'),
+    path('cv/validate/pdf', pdf_report_create, name = 'pdf_report_create')
 ]

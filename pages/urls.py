@@ -4,6 +4,7 @@ from .views import newCV
 from .views import myCv
 from .views import qr
 from .views import qaa
+
 from .views import HomePageView
 
 urlpatterns = [
@@ -11,5 +12,6 @@ urlpatterns = [
     path('cv/',newCV ),
      path('myCV/', myCv),
      path('qr/', qr),
-     path('qaa/', qaa)
+     path('qaa/', qaa),
+    
 ]

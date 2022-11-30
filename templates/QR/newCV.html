@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <title>my CV</title>
   <link rel="icon" type="image/x-icon" href="https://www.logolynx.com/images/logolynx/f7/f729f82b040ce6f1cbc0b812028371e8.png">
@@ -20,78 +20,81 @@
 </head>
 
 <body>
-    <div class="p-3">
-        <a href="{% url 'home' %}" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter in your account" tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-home"></i>Home</a>
-    </div> 
+
+  <div class="p-3">
+    <a href="{% url 'home' %}" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter in your account" tabindex="-1" role="button" aria-disabled="true"><i class="fa fa-home"></i>Home</a>
+</div> 
 
 <div class="container p-3">
-    <div class="alert alert-primary" role="alert">
-       <b> Create your first CV </b> 
-    </div>
+  <div class="alert alert-primary" role="alert">
+     <b> Create your first CV </b> 
+  </div>
 </div>   
 
-
-<form class="was-validated container"method="post">
-    <div class="card border-success mb-3  ">
+    <form class="was-validated container" action="validate" method="post">
+        {% csrf_token %}
+       
+        {% comment %} Username : <input type="text" name="user" ><br><br> {% endcomment %}
+     
+        <div class="card border-success mb-3  ">
         
-        <div class="card-header"><b>Personal details</b></div>
-        <div class="card-body text-primary">
-          <h5 class="card-title">Fill in the fields with your personal data</h5>
-          <p class="card-text">
-            <label for="prenume" class="form-label"> First Name</label>
-            <input class="form-control is-invalid" id="prenume" placeholder="eg: Maria" required></textarea>
-            <div class="invalid-feedback">
-                Please enter a message in the textarea.
-              </div>
-            <label for="nume" class="form-label">Last Name</label>
-            <input class="form-control is-invalid" id="nume" placeholder="eg: Vasilache" required></textarea>
+          <div class="card-header"><b>Personal details</b></div>
+          <div class="card-body text-primary">
+            <h5 class="card-title">Fill in the fields with your personal data</h5>
+            <p class="card-text">
+              <label for="prenume" class="form-label"> First Name</label>
+              <input class="form-control is-invalid"  name="prenume" id="prenume" placeholder="eg: Maria" required></textarea>
+              <div class="invalid-feedback">
+                  Please enter a message in the textarea.
+                </div>
+                <label for="nume" class="form-label">Last Name</label>
+            <input class="form-control is-invalid"  name="nume" id="nume" placeholder="eg: Vasilache" required></textarea>
            
             <label for="yourProfession" class="form-label">Your Profession</label>
-            <input class="form-control is-invalid" id="yourProfession" placeholder="eg: Student" required></textarea>
+            <input class="form-control is-invalid" name="profession" id="yourProfession" placeholder="eg: Student" required></textarea>
         
              
             <label for="the_current_job" class="form-label">Your current job</label>
-            <input class="form-control is-invalid" id="the_current_job" placeholder="eg: UTCN" required></textarea>
-            
-        </p>
+            <input class="form-control is-invalid" name="yourBio" id="the_current_job" placeholder="eg: UTCN" required></textarea>
+   
+                
+          </p>
+          </div>
+          </div>
         </div>
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 180rem;">
+          <div class="card-header"><b>Profile photo</b></div>
+          <div class="card-body">
+              <div class="form-row">
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
+                      <label for="attach" class="form-label">Please attach your picture</label>
+                      <input type="file" name="attach" id="attach" onchange="return fileValidation()" accept="application/png,application/vnd.ms-excel" class="form-control" required>
+                  </div>
+                </div>    
+             </div>
         </div>
-      </div>
+
+        <div class="form-check mb-3">
+          <div class="card border-success mb-3  ">
+              <div class="card-header"><b>Your Country</b></div>
+              <div class="card-body text-primary">
+                <p class="card-text">
+                  <select name="yourCountry" id="yourCountry" class="form-select" required aria-label="select example">
+                      <option value="">Choose country and city</option>
+                      <option value="1">Romania/Cluj-Napoca</option>
+                      <option value="2">Romania/Iasi</option>
+                      <option value="3">France/Paris</option>
+                    </select>
+                  </p>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>  
 
 
       <div class="card text-white bg-primary mb-3" style="max-width: 180rem;">
-        <div class="card-header"><b>Profile photo</b></div>
-        <div class="card-body">
-            <div class="form-row">
-                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12">
-                    <label for="attach" class="form-label">Please attach your picture</label>
-                    <input type="file" name="attach" id="attach" onchange="return fileValidation()" accept="application/png,application/vnd.ms-excel" class="form-control" required>
-                </div>
-              </div>    
-           </div>
-      </div>
-
-
-    <div class="form-check mb-3">
-        <div class="card border-success mb-3  ">
-            <div class="card-header"><b>Your Country</b></div>
-            <div class="card-body text-primary">
-              <p class="card-text">
-                <select  id="yourCountry" class="form-select" required aria-label="select example">
-                    <option value="">Choose country and city</option>
-                    <option value="1">Romania/Cluj-Napoca</option>
-                    <option value="2">Romania/Iasi</option>
-                    <option value="3">France/Paris</option>
-                  </select>
-                </p>
-            </div>
-            </div>
-          </div>
-        </div>
-    </div>  
-
-    
-    <div class="card text-white bg-primary mb-3" style="max-width: 180rem;">
         <div class="card-header"><b>Birth date</b></div>
         <div class="card-body">
             <div class="form-row">
@@ -101,90 +104,79 @@
                         <label for="date" class="col-sm-1 col-form-label">Date</label>
                         <div class="col-sm-4">
                             <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control">
+                                <input  type="text"name="yourBirthday" >
                                 <span class="input-group-append">
                             <span class="input-group-text bg-white">
                                 <i class="fa fa-calendar"></i>
                             </span>
                         </span>
                     </div>
-                </div>
+                  </div>
                 </div>
              </div>    
            </div>
       </div>
 
     </div>
-        
 
     <div class="card border-success mb-3  ">
         
-        <div class="card-header"><b>Contact Data - Social Networks</b></div>
-        <div class="card-body text-primary">
-          <p class="card-text">
-            <label for="gitHub" class="form-label "> Git Hub</label>
-            <input class="form-control is-invalid" id="gitHub" placeholder="eg: https://github.com/vmaria2002/" required></textarea>
-    
-            <label for="linkedin" class="form-label">Linkedin</label>
-            <input class="form-control is-invalid" id="linkedin." placeholder="eg: https://www.linkedin.com/in/maria-vasilache-b443b21b5/" required></textarea>
-           
-            <label for="facebook" class="form-label">Facebook</label>
-            <input class="form-control is-invalid" id="facebook" placeholder="eg: https://www.facebook.com/profile.php?id=100004722048771" required></textarea>
-                    
-        </p>
-        </div>
-        </div>
-      </div>
-
-    </div>
-
-
-<div class="p-7">
-<div class="card border-success mb-3  ">
-    <div class="card-header">Skills</div>
-    <div class="card-body text-primary">
-        <h5>Introduce your skills. </h5>
-        <p class="card-title" style="color: black"> You can add a skill by pressing the add button or you can delete a field by pressing the Delete button</p>
+      <div class="card-header"><b>Contact Data - Social Networks</b></div>
+      <div class="card-body text-primary">
         <p class="card-text">
-            <div class="mb-3">
-                <div id="skills">
-	
-                </div>
-              </div>      
-          </p>
+          <label for="gitHub" class="form-label "> Git Hub</label>
+          <input class="form-control is-invalid" name="gitHub" id="gitHub" placeholder="eg: https://github.com/vmaria2002/" required></textarea>
+  
+          <label for="linkedin" class="form-label">Linkedin</label>
+          <input class="form-control is-invalid" name="linkedin" id="linkedin" placeholder="eg: https://www.linkedin.com/in/maria-vasilache-b443b21b5/" required></textarea>
+         
+          <label for="facebook" class="form-label">Facebook</label>
+          <input class="form-control is-invalid" name="facebook" id="facebook" placeholder="eg: https://www.facebook.com/profile.php?id=100004722048771" required></textarea>
+                  
+      </p>
+      </div>
       </div>
     </div>
-</div>
+
+  </div>
 
 
-<div class="p-7">
+  <div class="p-7">
     <div class="card border-success mb-3  ">
-        <div class="card-header">Hobbies</div>
+        <div class="card-header">Skills</div>
         <div class="card-body text-primary">
-            <h5>Introduce your hobbies. </h5>
-            <p class="card-title" style="color: black">Introduce your hobbies. You can add a hobbie by pressing the "add" button or you can delete a field by pressing the "Delete" button</p>
-            <p class="card-text">
-                <div class="mb-3">
-                    <div id="hobbie">
-        
-                    </div>
-                  </div>      
-              </p>
+            <h5>Introduce your skills. </h5>
+            <p class="card-title" style="color: black"> You can add a skill by pressing the add button or you can delete a field by pressing the Delete button</p>
+            <label for="the_current_job" class="form-label">Your current job</label>
+            <input class="form-control is-invalid" name="yourSkills" id="the_current_job" placeholder="eg: your skills" required></textarea>
           </div>
         </div>
     </div>
+
+    <div class="p-7">
+      <div class="card border-success mb-3  ">
+          <div class="card-header">Hobbies</div>
+          <div class="card-body text-primary">
+              <h5>Introduce your hobbies. </h5>
+              <p class="card-title" style="color: black">Introduce your hobbies. You can add a hobbie by pressing the "add" button or you can delete a field by pressing the "Delete" button</p>
+              <p class="card-text">
+                <label for="the_current_job" class="form-label">Your hobbies</label>
+                <input class="form-control is-invalid" name="yourHobbies" id="the_current_job" placeholder="eg: your skills" required></textarea>
+         
+                </p>
+            </div>
+          </div>
+      </div>
     
-
-
-
-    <div class="card border-success mb-3  ">
+      
+      <div class="card border-success mb-3  ">
         
         <div class="card-header"><b>Education</b></div>
         <div class="card-body text-primary">
           <h5 class="card-title">Fill in the fields with name of the University you study</h5>
           <p class="card-text">
             <label for="university" class="form-label" style="color: black"><b> University Name</b></label>
-            <input class="form-control is-invalid" id="university" placeholder="eg: UTCN" required></textarea>
+            <input class="form-control is-invalid" name="yourEdu"  id="university" placeholder="eg: UTCN" required></textarea>
             
 
             <div class="form-row">
@@ -192,9 +184,9 @@
                  <h3 class="pt-4 pb-2"></h3>
                     <div class="row form-group">
                         <label for="date" class="col-sm-2 col-form-label"style="color: black"><b>Date of graduation</b></label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-4">
                             <div class="input-group date" id="datepicker_univ">
-                                <input type="text" class="form-control">
+                                <input type="text" name="eduYear" class="form-control">
                                 <span class="input-group-append">
                             <span class="input-group-text bg-white">
                                 <i class="fa fa-calendar"></i>
@@ -209,27 +201,28 @@
         </div>
         </div>
       </div>
-   
 
 
-      <div class="card border-success mb-3  ">
-        
+
+
+
+
+      <div class="card border-success mb-3  ">    
         <div class="card-header"><b>Work</b></div>
         <div class="card-body text-primary">
           <h5 class="card-title">Fill in the fields with name of the your company's name </h5>
           <p class="card-text">
             <label for="work" class="form-label" style="color: black"><b>  </b></label>
-            <input class="form-control is-invalid" id="work" placeholder="eg: 11Digits" required></textarea>
-            
-
+            <input class="form-control is-invalid" name="work" id="work" placeholder="eg: 11Digits" required></textarea>
+          
             <div class="form-row">
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12"> 
-                 <h3 class="pt-4 pb-2"></h3>
+                 <h3 class="pt-4 pb-4"></h3>
                     <div class="row form-group">
                         <label for="date" class="col-sm-2 col-form-label"style="color: black"><b>Date of employment</b></label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-4">
                             <div class="input-group date" id="datepicker_work">
-                                <input type="text" class="form-control">
+                                <input type="text" name="year_work" class="form-control">
                                 <span class="input-group-append">
                             <span class="input-group-text bg-white">
                                 <i class="fa fa-calendar"></i>
@@ -244,7 +237,6 @@
         </div>
         </div>
       </div>
-   
 
 
       <div class="card border-success mb-3  ">
@@ -253,11 +245,11 @@
         <div class="card-body text-primary">
           <p class="card-text">
             <label for="project" class="form-label "> The name of project</label>
-            <input class="form-control is-invalid" id="project" placeholder="eg: My first project in Java" required></textarea>
+            <input class="form-control is-invalid" name="yourProject" id="project" placeholder="eg: My first project in Java" required></textarea>
     
             <label for="link_prj" class="form-label">Link to Git Hub</label>
-            <input class="form-control is-invalid" id="link_prj." placeholder="eg: https://www.linkedin.com/in/maria-vasilache-b443b21b5/" required></textarea>
-                              
+            <input class="form-control is-invalid" name="projectLink" id="link_prj." placeholder="eg: https://www.linkedin.com/in/maria-vasilache-b443b21b5/" required></textarea>
+                         
         </p>
         </div>
         </div>
@@ -265,171 +257,171 @@
 
     </div>
 
-    
-    
-    <div class="container mb-3">
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-  </form>
+
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 
+
+
 <script>
-    @mixin form-validation-state-selector($state) {
-        @if ($state == "valid" or $state == "invalid") {
-          .was-validated #{if(&, "&", "")}:#{$state},
-          #{if(&, "&", "")}.is-#{$state} {
-            @content;
-          }
-        } @else {
-          #{if(&, "&", "")}.is-#{$state} {
-            @content;
-          }
+  @mixin form-validation-state-selector($state) {
+      @if ($state == "valid" or $state == "invalid") {
+        .was-validated #{if(&, "&", "")}:#{$state},
+        #{if(&, "&", "")}.is-#{$state} {
+          @content;
+        }
+      } @else {
+        #{if(&, "&", "")}.is-#{$state} {
+          @content;
         }
       }
-      
-      @mixin form-validation-state(
-        $state,
-        $color,
-        $icon,
-        $tooltip-color: color-contrast($color),
-        $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
-        $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
-      ) {
-        .#{$state}-feedback {
-          display: none;
-          width: 100%;
-          margin-top: $form-feedback-margin-top;
-          @include font-size($form-feedback-font-size);
-          font-style: $form-feedback-font-style;
-          color: $color;
+    }
+    
+    @mixin form-validation-state(
+      $state,
+      $color,
+      $icon,
+      $tooltip-color: color-contrast($color),
+      $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
+      $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
+    ) {
+      .#{$state}-feedback {
+        display: none;
+        width: 100%;
+        margin-top: $form-feedback-margin-top;
+        @include font-size($form-feedback-font-size);
+        font-style: $form-feedback-font-style;
+        color: $color;
+      }
+    
+      .#{$state}-tooltip {
+        position: absolute;
+        top: 100%;
+        z-index: 5;
+        display: none;
+        max-width: 100%; // Contain to parent when possible
+        padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
+        margin-top: .1rem;
+        @include font-size($form-feedback-tooltip-font-size);
+        line-height: $form-feedback-tooltip-line-height;
+        color: $tooltip-color;
+        background-color: $tooltip-bg-color;
+        @include border-radius($form-feedback-tooltip-border-radius);
+      }
+    
+      @include form-validation-state-selector($state) {
+        ~ .#{$state}-feedback,
+        ~ .#{$state}-tooltip {
+          display: block;
         }
-      
-        .#{$state}-tooltip {
-          position: absolute;
-          top: 100%;
-          z-index: 5;
-          display: none;
-          max-width: 100%; // Contain to parent when possible
-          padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
-          margin-top: .1rem;
-          @include font-size($form-feedback-tooltip-font-size);
-          line-height: $form-feedback-tooltip-line-height;
-          color: $tooltip-color;
-          background-color: $tooltip-bg-color;
-          @include border-radius($form-feedback-tooltip-border-radius);
-        }
-      
+      }
+    
+      .form-control {
         @include form-validation-state-selector($state) {
-          ~ .#{$state}-feedback,
-          ~ .#{$state}-tooltip {
-            display: block;
+          border-color: $color;
+    
+          @if $enable-validation-icons {
+            padding-right: $input-height-inner;
+            background-image: escape-svg($icon);
+            background-repeat: no-repeat;
+            background-position: right $input-height-inner-quarter center;
+            background-size: $input-height-inner-half $input-height-inner-half;
           }
-        }
-      
-        .form-control {
-          @include form-validation-state-selector($state) {
+    
+          &:focus {
             border-color: $color;
-      
-            @if $enable-validation-icons {
-              padding-right: $input-height-inner;
-              background-image: escape-svg($icon);
-              background-repeat: no-repeat;
-              background-position: right $input-height-inner-quarter center;
-              background-size: $input-height-inner-half $input-height-inner-half;
-            }
-      
-            &:focus {
-              border-color: $color;
-              box-shadow: $focus-box-shadow;
-            }
-          }
-        }
-      
-        // stylelint-disable-next-line selector-no-qualifying-type
-        textarea.form-control {
-          @include form-validation-state-selector($state) {
-            @if $enable-validation-icons {
-              padding-right: $input-height-inner;
-              background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
-            }
-          }
-        }
-      
-        .form-select {
-          @include form-validation-state-selector($state) {
-            border-color: $color;
-      
-            @if $enable-validation-icons {
-              &:not([multiple]):not([size]),
-              &:not([multiple])[size="1"] {
-                padding-right: $form-select-feedback-icon-padding-end;
-                background-image: escape-svg($form-select-indicator), escape-svg($icon);
-                background-position: $form-select-bg-position, $form-select-feedback-icon-position;
-                background-size: $form-select-bg-size, $form-select-feedback-icon-size;
-              }
-            }
-      
-            &:focus {
-              border-color: $color;
-              box-shadow: $focus-box-shadow;
-            }
-          }
-        }
-      
-        .form-check-input {
-          @include form-validation-state-selector($state) {
-            border-color: $color;
-      
-            &:checked {
-              background-color: $color;
-            }
-      
-            &:focus {
-              box-shadow: $focus-box-shadow;
-            }
-      
-            ~ .form-check-label {
-              color: $color;
-            }
-          }
-        }
-        .form-check-inline .form-check-input {
-          ~ .#{$state}-feedback {
-            margin-left: .5em;
-          }
-        }
-      
-        .input-group .form-control,
-        .input-group .form-select {
-          @include form-validation-state-selector($state) {
-            @if $state == "valid" {
-              z-index: 1;
-            } @else if $state == "invalid" {
-              z-index: 2;
-            }
-            &:focus {
-              z-index: 3;
-            }
+            box-shadow: $focus-box-shadow;
           }
         }
       }
+    
+      // stylelint-disable-next-line selector-no-qualifying-type
+      textarea.form-control {
+        @include form-validation-state-selector($state) {
+          @if $enable-validation-icons {
+            padding-right: $input-height-inner;
+            background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+          }
+        }
+      }
+    
+      .form-select {
+        @include form-validation-state-selector($state) {
+          border-color: $color;
+    
+          @if $enable-validation-icons {
+            &:not([multiple]):not([size]),
+            &:not([multiple])[size="1"] {
+              padding-right: $form-select-feedback-icon-padding-end;
+              background-image: escape-svg($form-select-indicator), escape-svg($icon);
+              background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+              background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+            }
+          }
+    
+          &:focus {
+            border-color: $color;
+            box-shadow: $focus-box-shadow;
+          }
+        }
+      }
+    
+      .form-check-input {
+        @include form-validation-state-selector($state) {
+          border-color: $color;
+    
+          &:checked {
+            background-color: $color;
+          }
+    
+          &:focus {
+            box-shadow: $focus-box-shadow;
+          }
+    
+          ~ .form-check-label {
+            color: $color;
+          }
+        }
+      }
+      .form-check-inline .form-check-input {
+        ~ .#{$state}-feedback {
+          margin-left: .5em;
+        }
+      }
+    
+      .input-group .form-control,
+      .input-group .form-select {
+        @include form-validation-state-selector($state) {
+          @if $state == "valid" {
+            z-index: 1;
+          } @else if $state == "invalid" {
+            z-index: 2;
+          }
+          &:focus {
+            z-index: 3;
+          }
+        }
+      }
+    }
 </script>
 <script type="text/javascript">
-    $(function() {
-        $('#datepicker').datepicker();
-    });
+  $(function() {
+      $('#datepicker').datepicker();
+  });
 </script>
 
 <script type="text/javascript">
-    $(function() {
-        $('#datepicker_univ').datepicker();
-    });
+  $(function() {
+      $('#datepicker_univ').datepicker();
+  });
 </script>
 
 <script type="text/javascript">
-    $(function() {
-        $('#datepicker_work').datepicker();
-    });
+  $(function() {
+      $('#datepicker_work').datepicker();
+  });
 </script>
 
 
@@ -437,44 +429,45 @@
 
 {% comment %} Pentru logica de adaugare de nou butoane {% endcomment %}
 <script>
-    function addTextField(id){
-		var colors = new Array('#660000','#33ff00','#0066ff','#cc3399','#9966ff');
-		var container = document.getElementById(id);
-		var ulElement = document.createElement('ul');
-		container.appendChild(ulElement);
-		var hideLink = function(){
-			var firstElement = ulElement.firstChild.getElementsByTagName('a')[0];
-				firstElement.style.display = (ulElement.childNodes.length==1)?'none':'inline';
-			for(var i = 0 ; i <ulElement.childNodes.length; i++)
-				ulElement.childNodes[i].style.color = colors[i%5];
-		}
-		var addListElement = function(){
-			var liElement = document.createElement('li');
-			ulElement.appendChild(liElement);
-			var textElement = document.createElement('input');
-			textElement.setAttribute('type','text');
-			liElement.appendChild(textElement);
+  function addTextField(id){
+  var colors = new Array('#660000','#33ff00','#0066ff','#cc3399','#9966ff');
+  var container = document.getElementById(id);
+  var ulElement = document.createElement('ul');
+  container.appendChild(ulElement);
+  var hideLink = function(){
+    var firstElement = ulElement.firstChild.getElementsByTagName('a')[0];
+      firstElement.style.display = (ulElement.childNodes.length==1)?'none':'inline';
+    for(var i = 0 ; i <ulElement.childNodes.length; i++)
+      ulElement.childNodes[i].style.color = colors[i%5];
+  }
+  var addListElement = function(){
+    var liElement = document.createElement('li');
+    ulElement.appendChild(liElement);
+    var textElement = document.createElement('input');
+    textElement.setAttribute('type','text');
+    liElement.appendChild(textElement);
 
-			var deleteLink = document.createElement('a');
-			deleteLink.href = "#";
-			deleteLink.appendChild(document.createTextNode('delete'));
-			liElement.appendChild(deleteLink);
-			deleteLink.onclick = function(){
-				ulElement.removeChild(liElement);
-				hideLink();
-			}
-			hideLink();
-		}
-		addListElement();
-		var anchorElement = document.createElement('a');
-		anchorElement.href = "#";
-		anchorElement.appendChild(document.createTextNode('Add more'));
-		container.appendChild(anchorElement);
-		anchorElement.onclick = addListElement;
-		hideLink();
-				
-	}
+    var deleteLink = document.createElement('a');
+    deleteLink.href = "#";
+    deleteLink.appendChild(document.createTextNode('delete'));
+    liElement.appendChild(deleteLink);
+    deleteLink.onclick = function(){
+      ulElement.removeChild(liElement);
+      hideLink();
+    }
+    hideLink();
+  }
+  addListElement();
+  var anchorElement = document.createElement('a');
+  anchorElement.href = "#";
+  anchorElement.appendChild(document.createTextNode('Add more'));
+  container.appendChild(anchorElement);
+  anchorElement.onclick = addListElement;
+  hideLink();
+      
+}
 addTextField('skills');
 addTextField('hobbie');
 </script>    
+
 </html>

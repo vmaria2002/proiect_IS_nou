@@ -27,6 +27,13 @@ from django.shortcuts import render
 from .data import *
 import html
 from django.utils.html import escape
+import mimetypes
+import os
+from wsgiref.util import setup_testing_defaults
+from wsgiref.simple_server import make_server
+from wsgiref.util import FileWrapper
+from django.http import StreamingHttpResponse
+import pdfkit as pdf
 
 send_mail(
     subject = 'Test Mail',
@@ -44,12 +51,9 @@ class EmailForm(forms.Form):
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-def newCV(request):
-      #se preiau toate datele din interfata si se vor pune in baza de date;
-
-
-
-    return render(request, 'QR/newCV.html')  
+# def newCV(request):
+#       #se preiau toate datele din interfata si se vor pune in baza de date;
+#     return render(request, 'QR/newCV.html')  
 
 # def myCv(request):
 #      return render(request, 'QR/MyCV.html')  
@@ -89,7 +93,7 @@ def qaa(request):
             email['To'] = 'maria.vasilache02@gmail.com'
             email.set_content("S-a primit o solicitare de la "+emm+"\n\n"+ "Mesajul transmis:\n "+message+"\n"+"\nATENTIE: Este posibil sa fie incarcate atasamenta!!")
 
-            with open('D:\An3\IS\P1\cv_Maria_Vasilache.pdf', 'rb') as content_file:
+            with open('D:\An3\IS\P1\cv.pdf', 'rb') as content_file:
                 
                 content = content_file.read()
                 email.add_attachment(content, maintype='application', subtype='pdf', filename='cv.pdf')
@@ -202,7 +206,25 @@ def data():
         'footerText': footerText
         }
 
+def newCV(request):
+      #se preiau toate datele din interfata si se vor pune in baza de date;
+    return render(request, 'QR/newCV.html')  
+#validate
 def myCv(request):
      return render(request, 'QR/MyCV.html',  data())  
 #def home(request):
     #return render(response, "templates/home.html")
+
+def downloadFile(request):   
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    filename='cv_Maria_Vasilache.pdf'
+    thefile=base_dir + '/Files/'+ filename
+    filename = os.path.basename(thefile)
+    chunk_size =8192
+    reponse = StreamingHttpResponse(FileWrapper(open(thefile, 'rb'), chunk_size), content_type =mimetypes.guess_type(thefile)[0])
+    reponse['Content-Length']=os.path.getsize(thefile)
+    reponse['Content-Disposition']="Attachment;filename=%s" % filename
+    return reponse
+
+# def pdful(request) 
+    pdf.from_file('QR.MyCV.html', 'cv.pdf')   
